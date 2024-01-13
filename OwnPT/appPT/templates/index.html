@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="Welcome">    
+    <div class="links">
+        <article>
+            <h1>
+                <span>Welcome</span>
+                <div class="message">
+                  <div class="word1">User</div>
+                  <div class="word2">HRM</div>
+                  <div class="word3">Quest</div>
+                </div>
+            </h1>
+        <p>My name is Oleh and I am junior python developer. I specialize in building websites using Django. This site is an example of my skills, however you can find more information in my portfolio.
+        </p>   
+        </article>
+        <hr>
+        <a href="https://www.linkedin.com/in/томащук-олег-1aaa24270" target="_blank"><img src="{% static 'img/linkedin_1.png' %}" ></a>
+        <a href="https://www.instagram.com/y0leg?igsh=NW5peTlhaHU2Z3Nh" target="_blank"><img src="{% static 'img/instagram_1.png' %}" ></a>
+        <a href="mailto:tomashuk.oleg2005@gmail.com" target="_blank"><img src="{% static 'img/mail_1.png' %}" ></a>
+        <a href="https://telegram.me/Simbobobka" target="_blank"><img src="{% static 'img/telegram.png' %}"></a>        
+        <div>                   
+            {% for file in portfolio_pdf%}
+            <a href="{{file.file.url}}"><button  type="button" class="button-81" role="button">DOWNLOAD</button></a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div id="photo">        
+        <img src="{% static 'img/Photo_1.png' %}">
+    </div>  
+    <div id="border">
+        I am getting a bachelor's degree at Ivan Franko Lviv National University at the <strong>Faculty of "Electronics and Computer Technologies"</strong>     
+    </div>    
+
+</section>
+
+
+
+
+
+{% endblock %}
